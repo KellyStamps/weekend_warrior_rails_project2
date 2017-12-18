@@ -1,0 +1,7 @@
+<h1>My Favorite Bodega</h1>
+
+<% @bodegas.each do |bodega| %>
+  <p><%= link_to bodega.name, bodega_path(bodega) %></p>
+<%end%>
+<h3><%= link_to "Create New Favorite Bodega", '/bodegas/new'%></h3>
+<p><%= link_to "Neighborhoods Home", neighborhoods_path %></p>

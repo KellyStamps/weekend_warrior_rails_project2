@@ -1,0 +1,9 @@
+<h1>Choose Your Neighborhood</h1>
+<% @neighborhoods.each do |neighborhood| %>
+
+  <h3><%= link_to neighborhood.name, neighborhood_path(neighborhood) %></h3>
+
+<%end%>
+<h3><%= link_to "Create New Neighborhood", '/neighborhoods/new'%></h3>
+
+<p><%= link_to "Bodega Home", bodegas_path %></p>

@@ -1,0 +1,18 @@
+<h3>Create New Favorite Bodega:</h3>
+
+<%= form_tag bodegas_path do %>
+  <label>Name:</label><br>
+  <%= text_field_tag :name %><br>
+
+  <label>Rating:</label><br>
+  <%= text_field_tag :rating %><br>
+
+  <label>Neighborhood:</label><br>
+  <%= text_field_tag :neighborhood %><br>
+
+  <label>Comments:</label><br>
+  <%= text_field_tag :comments %><br>
+
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="submit" value="Submit">
+<% end %>

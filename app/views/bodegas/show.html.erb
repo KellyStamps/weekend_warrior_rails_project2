@@ -1,0 +1,11 @@
+<h1><%= @bodega.name %></h1>
+
+<h3>Your rating: <%= @bodega.rating %>/10</h3>
+
+<p>Neighborhood: <%= link_to @neighborhood.name, neighborhood_path(@neighborhood) %></p>
+
+<p>Comments: <%= @bodega.comments %></p>
+
+<h4><%= link_to "Edit", "/bodegas/#{@bodega.id}/edit" %></h4>
+
+<p><%= link_to "Home", bodegas_path %></p>

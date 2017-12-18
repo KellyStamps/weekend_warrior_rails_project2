@@ -1,0 +1,18 @@
+<h3>Edit this bodega:</h3>
+
+<%= form_tag bodega_path(@bodega), method: "PUT" do %>
+  <label>Name:</label><br>
+  <%= text_field_tag :name, @bodega.name %><br>
+
+  <label>Rating:</label><br>
+  <%= text_field_tag :rating, @bodega.rating %><br>
+
+  <label>Neighborhood:</label><br>
+  <%= text_field_tag :neighborhood, @bodega.neighborhood %><br>
+
+  <label>Comments:</label><br>
+  <%= text_field_tag :comments, @bodega.comments %><br>
+
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="submit" value="Submit">
+<% end %>

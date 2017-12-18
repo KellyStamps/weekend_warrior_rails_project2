@@ -1,0 +1,12 @@
+<h3>Create New Neighborhood:</h3>
+
+<%= form_tag neighborhoods_path do %>
+  <label>Name:</label><br>
+  <%= text_field_tag :name %><br>
+
+  <label>City:</label><br>
+  <%= text_field_tag :city %><br>
+
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="submit" value="Submit">
+<% end %>

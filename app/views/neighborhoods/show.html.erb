@@ -1,0 +1,9 @@
+<h2><%= @neighborhood.name %></h2>
+
+<% @bodegas.each do |bodega| %>
+  <% if bodega.neighborhood == @neighborhood.name%>
+    <p><%= link_to bodega.name, bodega_path(bodega) %></p>
+  <%end%>
+<% end %>
+
+<h3><%= link_to "Home", neighborhoods_path %></h3>
